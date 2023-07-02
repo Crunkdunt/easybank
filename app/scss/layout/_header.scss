@@ -1,0 +1,114 @@
+@use "../global/" as g;
+@use "../util/" as u;
+
+.header {
+	nav {
+		padding: u.rem(17) u.rem(24);
+	}
+
+	&__logo {
+		img {
+			width: u.rem(141);
+			height: u.rem(22);
+		}
+	}
+
+	&__menu {
+		span {
+			display: block;
+			width: u.rem(26);
+			height: u.rem(2);
+			background-color: var(--DARKBLUE);
+            transition: all 300ms ease-in-out;
+            transform-origin: u.rem(3) u.rem(1);
+
+			&:not(:last-child) {
+				margin-bottom: u.rem(5);
+			}
+		}
+
+        &.open {
+
+            > span:first-child {
+
+                transform: rotate(45deg);
+
+            }
+            > span:nth-child(2) {
+                opacity: 0;
+                
+            }
+            > span:last-child {
+
+                transform: rotate(-45deg);
+                
+            }
+        }
+	}
+
+	&__links {
+		a {
+			position: relative;
+			font-size: var(--FS-SM);
+			color: var(--GRAYISHBLUE);
+
+			transition: color var(--TRAN-DELAY) ease-in-out;
+
+			&:not(:last-child) {
+				//sets the margin between nav items excl last
+				margin-right: u.rem(32);
+			}
+
+			&::before {
+				//This will create a bottom border gradient effect on hover
+				content: "";
+				display: block;
+				position: absolute;
+				height: u.rem(5);
+				left: 0;
+				right: 0;
+				bottom: u.rem(-30.4);
+				background: var(--GRADIENT-BG);
+				opacity: 0;
+				transition: opacity var(--TRAN-DELAY) ease-in-out;
+			}
+			&:hover {
+				color: var(--DARKBLUE);
+
+				&::before {
+					opacity: 1;
+				}
+
+				//THIS NEEDS TO BE INVESTIGATED
+				// &::after {
+				// border-bottom: solid u.rem(5);
+				// padding-bottom: u.rem(30.4);
+				// border-image-source: var(--GRADIENT-BG);
+
+				// border-image-slice: 1;
+				// }
+			}
+		}
+	} 
+
+	&__cta {
+		font-size: var(--FS-SM);
+		color: white;
+		transition: opacity 300ms ease-in-out;
+
+		&:hover {
+			opacity: 0.75;
+		}
+	}
+}
+
+.overlay {
+    // background-color: var(--DARKBLUE);
+    background-image: linear-gradient(var(--DARKBLUE), transparent);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+}

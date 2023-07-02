@@ -1,0 +1,44 @@
+@use '../util' as u;
+/*| VARIABLES | */
+
+:root {
+	/* | COLORS | */
+
+	--DARKBLUE: hsl(233, 26%, 24%);
+	--LIMEGREEN: hsl(136, 65%, 51%);
+	--BRIGHTCYAN: hsl(192, 70%, 51%);
+	--GRAYISHBLUE: hsl(233, 8%, 62%);
+	--LIGHTGRAYISHBLUE: hsl(220, 16%, 96%);
+	--VERYLIGHTGRAY: hsl(0, 0%, 98%);
+	--WHITE: hsl(0, 0%, 100%);
+
+    --GRADIENT-BG:linear-gradient(to right, var(--LIMEGREEN), var(--BRIGHTCYAN));
+
+	/*FONTS*/
+	--FF-MAIN: "Public Sans", sans-serif; //weight 300 400 and 700
+
+    /*FONT SIZES*/ 
+    --FS-SM: 0.875rem; //0.875rem
+    --FS-MED: 1.125rem;
+
+    /*TRANSITION SPEEDS*/
+    --TRAN-DELAY: 300ms;
+	// Dark Mode
+	//     @media (prefers-color-scheme: dark) {
+	//     :root {
+	//         --BGCOLOR-FADE: gray;
+	//         --BGCOLOR: #000;
+	//         --BODY-BGCOLOR: #333;
+	//         --BORDER-COLOR: whitesmoke;
+	//         --BUTTON-COLOR: #000;
+	//         --FONT-COLOR: whitesmoke;
+	//         --HEADER-COLOR: whitesmoke;
+	//         --HERO-COLOR: #333;
+	//         --HIGHLIGHT-COLOR: whitesmoke;
+	//         --LINK-ACTIVE: rgb(252, 200, 103);
+	//         --LINK-COLOR: whitesmoke;
+	//         --LINK-HOVER: orange;
+	//         --NAV-BGCOLOR: rgb(20, 20, 20);
+	//     }
+	// }
+}

@@ -1,29 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Easybank landing page</title>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./css/style.css" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+		<title>Frontend Mentor | Easybank landing page</title>
 
-  Home
-  About
-  Contact
-  Blog
-  Careers
+		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+		<style>
+			.attribution {
+				font-size: 11px;
+				text-align: center;
+			}
+			.attribution a {
+				color: hsl(228, 45%, 44%);
+			}
+		</style>
+	</head>
+	<body>
+		<header class="header">
+      <div class="overlay">
+        
+      </div>
+			<nav class="flex flex--jc-sb flex--ai-c">
+				<a href="#" class="header__logo">
+					<img src="./images/logo.svg" alt="Easybank" />
+				</a>
 
-  Request Invite
+				<a id="btnHamburger" href="#" class="header__menu hide-for-desktop">
+					<span></span>
+					<span></span>
+					<span></span>
+				</a>
 
+				<div class="header__links hide-for-mobile">
+					<a href="http://">Home</a><a href="http://">About</a><a href="http://">Contact</a><a href="http://">Blog</a><a href="http://">Careers</a>
+				</div>
+				<a href="" class="button header__cta hide-for-mobile">Request Invite</a>
+			</nav>
+		</header>
 
 
   Next generation digital banking
@@ -92,10 +122,14 @@
   Request Invite
 
   © Easybank. All Rights Reserved
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+
+		<div class="attribution">
+			Challenge by
+			<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+				>Frontend Mentor</a
+			>. Coded by <a href="#">Your Name Here</a>.
+		</div>
+
+		<script src="./app/js/script.js"></script>
+	</body>
 </html>

@@ -1,0 +1,8 @@
+@use "../util/" as u;
+.grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 40px;
+	justify-content: center;
+	text-align: center;
+}

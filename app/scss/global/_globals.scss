@@ -1,0 +1,82 @@
+@use "../util/" as u;
+/* | RESETS | */
+
+html {
+	box-sizing: border-box;
+	font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+a, a:visited, a:hover {
+	text-decoration: none;
+	
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	line-height: 1.3;
+	font-weight: 300;
+	font-family: var(--FF-MAIN);
+	font-size: var(--FS-MED);
+	color: var(--GRAYISH-BLUE);
+	
+}
+
+img {
+	//responsive image i think
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+/* | UTILITIES | */
+
+.offscreen {
+	//hide elements off screen but in flow
+	position: absolute;
+	left: -10000px;
+}
+
+.nowrap {
+	//stops text from wrapping
+	white-space: nowrap;
+}
+
+.center {
+	text-align: center;
+}
+
+/* || BASE ELEMENTS */
+
+//buttons
+
+button, .button {
+    padding: u.rem(14) u.rem(35);
+    border-radius: u.rem(50);
+    cursor: pointer;
+    background: var(--GRADIENT-BG);
+    color: white;
+    font-weight: 400;
+
+}
+
+// visibility
+
+.hide-for-mobile {
+	@include u.breakpoint-down(medium){
+		display: none;
+	}
+}
+
+.hide-for-desktop {
+	@include u.breakpoint-up(large){
+		display: none;
+	}
+}
+
